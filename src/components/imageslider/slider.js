@@ -5,35 +5,29 @@ import Arrows from "./arrow";
 import SliderContent from './slidercontent';
 import './slider.css';
 
-export function Slider({slides,width,height,showBullets,autoPlay,transitionSpeed}){
+const Slider = props => {
     const [activeIndex, setActiveIndex] =useState(0);
-    // const [divwidth,setWidth] =useState('90%');
-    // const [divheight,setHeight]=useState('50vh');
-    // const [transition,setTransition] = useState(1000);
-    const length = slides.length;
+    const length = props.slides.length;
     useEffect(()=>{
-        // if(width) setWidth(width);
-        // if(height) setHeight(height);
-        // if(transitionSpeed) setTransition(transitionSpeed);
-        autoPlay && setTimeout(()=>{
+        props.autoPlay && setTimeout(()=>{
             activeIndex === length-1?
             setActiveIndex(0):
             setActiveIndex(activeIndex+1);
-        },transitionSpeed);
-    },[activeIndex,transitionSpeed])
+        },props.transitionSpeed);
+    },[activeIndex,props.transitionSpeed])
 
-    // const setSize ={
-    //     width:divwidth,
-    //     height:divheight
-    // }
+    const setSize ={
+        width:props.width,
+        height:props.height
+    }
 
 
      return (
-        <div className="slider-container" style={{width,height}}>
+        <div className="slider-container" style={setSize}>
             <SliderContent
             activeIndex={activeIndex}
-            slide={slides}
-            divheight={height}
+            slide={props.slides}
+            divheight={props.height}
             />
             <Arrows 
         prevSlide={()=>
@@ -41,10 +35,10 @@ export function Slider({slides,width,height,showBullets,autoPlay,transitionSpeed
         nextSlide={()=>
         activeIndex === length-1 ? setActiveIndex(0) : setActiveIndex(activeIndex+1)}
         />
-        {showBullets&&<Dot 
+        {props.showBullets&&<Dot 
         activeIndex={activeIndex}
         onclick={(activeIndex)=>setActiveIndex(activeIndex)}
-        sliderimages={slides}
+        sliderimages={props.slides}
         />}
         
         </div>
@@ -65,3 +59,4 @@ Slider.propTypes = {
     height: "400px",
     showBullets: true
   };
+export default Slider;

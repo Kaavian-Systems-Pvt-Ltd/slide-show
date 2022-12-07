@@ -10,7 +10,7 @@ function SliderContent({activeIndex,slide,divheight}){
             {slide.map((el, index) => (
                 <div className="slide">
                {/* <div key={index} className={activeIndex === index? 'slide active': 'inactive'}> */}
-                    <img src={el.url} alt = {index} className="slide-image" max-height={divheight}/>
+                    <img src={el.url} alt = {index} className="slide-image" height={divheight}/>
                  </div>
                )
             )}

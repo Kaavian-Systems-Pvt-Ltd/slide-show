@@ -22,18 +22,18 @@ export function Slider({slides,width,height,showBullets,autoPlay,transitionSpeed
         },transitionSpeed);
     },[activeIndex,transitionSpeed])
 
-    const setSize ={
-        width:width,
-        height:height
-    }
+    // const setSize ={
+    //     width:divwidth,
+    //     height:divheight
+    // }
 
 
      return (
-        <div className="slider-container" style={setSize}>
+        <div className="slider-container" style={{width,height}}>
             <SliderContent
             activeIndex={activeIndex}
             slide={slides}
-            divheight={{height}}
+            divheight={height}
             />
             <Arrows 
         prevSlide={()=>
@@ -59,7 +59,7 @@ Slider.propTypes = {
   
   Slider.defaultProps = {
     autoPlay: false,
-    transitionSpeed: 5000,
-    width: "50%",
-    height: "300px"
+    transitionSpeed: 3000,
+    width: "70%",
+    height: "400px"
   };

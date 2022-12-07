@@ -30,6 +30,7 @@
     "@storybook/react": "^6.5.14",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.3.0",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.2",
     "html-webpack-plugin": "^5.5.0",
     "path": "^0.12.7",

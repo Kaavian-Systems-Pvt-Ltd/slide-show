@@ -5,31 +5,31 @@ import Arrows from "./arrow";
 import SliderContent from './slidercontent';
 import './slider.css';
 
-export function Slider({slides,width,height,showBullets,autoPlay,transitionSpeed}){
+function Slider({slides,width,height,showBullets,autoPlay,transitionSpeed}){
     const [activeIndex, setActiveIndex] =useState(0);
-    // const [divwidth,setWidth] =useState('90%');
-    // const [divheight,setHeight]=useState('50vh');
-    // const [transition,setTransition] = useState(1000);
+    const [divwidth,setWidth] =useState('90%');
+    const [divheight,setHeight]=useState('50vh');
+    const [transition,setTransition] = useState(1000);
     const length = slides.length;
     useEffect(()=>{
-        // if(width) setWidth(width);
-        // if(height) setHeight(height);
-        // if(transitionSpeed) setTransition(transitionSpeed);
+        if(width) setWidth(width);
+        if(height) setHeight(height);
+        if(transitionSpeed) setTransition(transitionSpeed);
         autoPlay && setTimeout(()=>{
             activeIndex === length-1?
             setActiveIndex(0):
             setActiveIndex(activeIndex+1);
-        },transitionSpeed);
-    },[activeIndex,transitionSpeed])
+        },transition);
+    },[activeIndex,transition])
 
-    // const setSize ={
-    //     width:divwidth,
-    //     height:divheight
-    // }
+    const setSize ={
+        width:divwidth,
+        height:divheight
+    }
 
 
      return (
-        <div className="slider-container" style={{width,height}}>
+        <div className="slider-container" style={setSize}>
             <SliderContent
             activeIndex={activeIndex}
             slide={slides}
@@ -50,16 +50,18 @@ export function Slider({slides,width,height,showBullets,autoPlay,transitionSpeed
         </div>
      );
 };
-Slider.propTypes = {
-    autoPlay: PropTypes.bool,
-    transitionSpeed: PropTypes.number,
-    width: PropTypes.string,
-    height: PropTypes.string
-  };
+
+export default Slider;
+// Slider.propTypes = {
+//     autoPlay: PropTypes.bool,
+//     transitionSpeed: PropTypes.number,
+//     width: PropTypes.string,
+//     height: PropTypes.string
+//   };
   
-  Slider.defaultProps = {
-    autoPlay: false,
-    transitionSpeed: 3000,
-    width: "70%",
-    height: "400px"
-  };
+//   Slider.defaultProps = {
+//     autoPlay: false,
+//     transitionSpeed: 3000,
+//     width: "70%",
+//     height: "400px"
+//   };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { storiesOf } from "@storybook/react";
-import { Slider } from "../src/components/imageslider/slider";
+import  Slider  from "../src/components/imageslider/slider";
 import '../src/components/imageslider/slider.css';
 
 const stories = storiesOf('Slideshow Test', module);
@@ -34,7 +34,7 @@ stories.add('autoplay', () => {
         {url:"https://thumbs.dreamstime.com/b/mothers-day-flowers-yellow-gerbera-flower-stock-photo-jpg-looks-beautiful-214173760.jpg"},
         {url:"https://p1.pxfuel.com/preview/653/702/399/rose-flower-flowers-red-rose-royalty-free-thumbnail.jpg"}
     ];
-    const [width,setWidth] = useState('40%');
+    const [width,setWidth] = useState('70%');
     const [height,setheight] = useState('400px');
     const [ap,setap] = useState(true);
     const [sb,setsb] = useState(true);

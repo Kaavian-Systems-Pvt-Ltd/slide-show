@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { storiesOf } from "@storybook/react";
-import  Slider  from "../src/components/imageslider/slider";
+import  {Slider}  from "../src/components/imageslider/slider";
 import '../src/components/imageslider/slider.css';
 
 const stories = storiesOf('Slideshow Test', module);

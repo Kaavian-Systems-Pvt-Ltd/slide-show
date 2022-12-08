@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { storiesOf } from "@storybook/react";
-import  {Slider}  from "../dist/index";
-import '../src/components/imageslider/slider.css';
+// import propTypes from "prop-types";
+import  {Slider}  from "../../dist/index";
+// import './slider.css';
 
 const stories = storiesOf('Slideshow Test', module);
 

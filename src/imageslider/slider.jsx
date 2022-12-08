@@ -5,16 +5,16 @@ import Arrows from "./arrow";
 import SliderContent from './slidercontent';
 import './slider.css';
 
-export const Slider = props => {
+export const Slider = (props) => {
     const [activeIndex, setActiveIndex] =useState(0);
-    const length = props.slides.length;
+    const length =props.slides;
     useEffect(()=>{
         props.autoPlay && setTimeout(()=>{
             activeIndex === length-1?
             setActiveIndex(0):
             setActiveIndex(activeIndex+1);
         },props.transitionSpeed);
-    },[activeIndex,props.transitionSpeed])
+    },)
 
     const setSize ={
         width:props.width,
@@ -45,6 +45,7 @@ export const Slider = props => {
      );
 };
 Slider.propTypes = {
+    slides:PropTypes.array,
     autoPlay: PropTypes.bool,
     transitionSpeed: PropTypes.number,
     width: PropTypes.string,

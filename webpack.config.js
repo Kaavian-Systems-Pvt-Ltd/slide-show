@@ -5,8 +5,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '',
-        filename: 'index.js'
+        filename: 'index.js',
+        libraryTarget: 'commonjs'
       },
       mode: 'production',
       plugins: [ new CleanWebpackPlugin () ] ,

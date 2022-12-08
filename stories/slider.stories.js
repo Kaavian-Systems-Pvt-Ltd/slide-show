@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { storiesOf } from "@storybook/react";
-import  Slider  from "../src/components/imageslider/slider";
+import  {Slider}  from "../dist/index";
 import '../src/components/imageslider/slider.css';
 
 const stories = storiesOf('Slideshow Test', module);
@@ -30,11 +30,8 @@ stories.add('autoplay', () => {
     const [sb,setsb] = useState(true);
     const [ts,setts] = useState(2000);
     return (<Slider
-        width={width}
-        height={height} 
+        width='40%'
+        height='400px' 
         slides={images}
-        autoPlay={ap}
-        showBullets={sb} 
-        transitionSpeed={ts}
         />);
 })

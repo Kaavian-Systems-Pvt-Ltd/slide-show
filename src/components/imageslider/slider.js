@@ -5,7 +5,7 @@ import Arrows from "./arrow";
 import SliderContent from './slidercontent';
 import './slider.css';
 
-const Slider = props => {
+export const Slider = props => {
     const [activeIndex, setActiveIndex] =useState(0);
     const length = props.slides.length;
     useEffect(()=>{
@@ -59,4 +59,3 @@ Slider.propTypes = {
     height: "400px",
     showBullets: true
   };
-export default Slider;

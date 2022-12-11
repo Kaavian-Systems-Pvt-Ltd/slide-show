@@ -2,19 +2,19 @@
 
 ## Usage
 
-#####  import {Slider} from '@kaavian-sys/slide-show'
-##### const images=[
-#####    {url:"image-path"},
-#####    {url:"image-path"}
-##### ];
+###  import {Slider} from '@kaavian-sys/slide-show'
+#### const images=[
+####    {url:"image-path"},
+####    {url:"image-path"}
+#### ];
 
-###### const App () = {
-######   <Slider 
-######       slides={images},
-######       width={'70%'},
-######       height={'400px'},
-######       showBullets={true} />    
-###### }
+#### const App () = {
+#### ---  <Slider 
+#### ------   slides={images},
+#### ------      width={'70%'},
+####       height={'400px'},
+####       showBullets={true} />    
+#### }
 
 | Name | Type | Required | Description | Default |
 | ---  | ---  | -------- | ----------- | ------- | 

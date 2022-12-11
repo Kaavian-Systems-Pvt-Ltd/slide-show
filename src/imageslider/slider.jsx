@@ -5,10 +5,14 @@ import Arrows from "./arrow";
 import SliderContent from './slidercontent';
 import './slider.css';
 
-export const Slider = (props) => {
+export function Slider(props){
     const [activeIndex, setActiveIndex] =useState(0);
-    const length =props.slides;
+    const [arrow, setArrow] =useState(props.showArrow);
+    const length = props.slides.length;
     useEffect(()=>{
+        if (!props.slides) return null;
+        if (props.autoPlay!==true) setArrow(true);
+        else setArrow(false);
         props.autoPlay && setTimeout(()=>{
             activeIndex === length-1?
             setActiveIndex(0):
@@ -27,14 +31,13 @@ export const Slider = (props) => {
             <SliderContent
             activeIndex={activeIndex}
             slide={props.slides}
-            divheight={props.height}
             />
-            <Arrows 
+            {arrow && <Arrows 
         prevSlide={()=>
         activeIndex === 0 ? setActiveIndex(length-1) : setActiveIndex(activeIndex-1)}
         nextSlide={()=>
         activeIndex === length-1 ? setActiveIndex(0) : setActiveIndex(activeIndex+1)}
-        />
+        />}
         {props.showBullets&&<Dot 
         activeIndex={activeIndex}
         onclick={(activeIndex)=>setActiveIndex(activeIndex)}
@@ -50,13 +53,15 @@ Slider.propTypes = {
     transitionSpeed: PropTypes.number,
     width: PropTypes.string,
     height: PropTypes.string,
-    showBullets: PropTypes.bool
+    showBullets: PropTypes.bool,
+    showArrow: PropTypes.bool
   };
   
   Slider.defaultProps = {
-    autoPlay: false,
+    autoPlay: true,
     transitionSpeed: 3000,
-    width: "70%",
+    width: "50%",
     height: "400px",
-    showBullets: true
+    showBullets: true,
+    showArrow:false
   };

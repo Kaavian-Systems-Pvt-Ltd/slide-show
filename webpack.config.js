@@ -16,6 +16,7 @@ module.exports = {
       // mode: 'production',
       plugins: [ new CleanWebpackPlugin () ] ,
       module: {
+        
         rules: [
             {
                 test : /\.(js|jsx)$/ ,

@@ -10,13 +10,14 @@
 #### ];
 
 #### const App () = {
-#### &nbsp  return(  
-#### &nbsp&nbsp        <div>  
-#### &nbsp&nbsp&nbsp            <Slider 
-#### &nbsp&nbsp&nbsp&nbsp     slides={images},
-#### &nbsp&nbsp&nbsp&nbsp      width={'70%'},
-#### &nbsp&nbsp&nbsp&nbsp      height={'400px'},
-#### &nbsp&nbsp&nbsp&nbsp      showBullets={true} />    
+####   return(  
+####      <div>  
+####        <Slider 
+####           slides={images},
+####           width={'70%'},
+####           height={'400px'},
+####           showBullets={true} /> 
+####      </div>
 #### )};
 
 | Name | Type | Required | Description | Default |

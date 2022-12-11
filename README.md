@@ -5,8 +5,8 @@
 ###  import {Slider} from '@kaavian-sys/slide-show'
 
 #### const images=[
-####  &nbsp&nbsp  {url:"image-path"},
-####  &nbsp&nbsp  {url:"image-path"}
+####    {url:"image-path"},
+####    {url:"image-path"}
 #### ];
 
 #### const App () = {

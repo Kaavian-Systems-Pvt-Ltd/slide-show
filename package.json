@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint-config-kaaviansys": "github:Kaavian-Systems-Pvt-Ltd/eslint-config-kaaviansys",
     "prop-types": "^15.8.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1"
@@ -31,6 +32,12 @@
     "babel-loader": "^8.3.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.2",
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "html-webpack-plugin": "^5.5.0",
     "path": "^0.12.7",
     "react": "^18.2.0",

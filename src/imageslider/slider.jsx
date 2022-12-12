@@ -60,7 +60,7 @@ Slider.propTypes = {
   Slider.defaultProps = {
     autoPlay: true,
     transitionSpeed: 3000,
-    width: "50%",
+    width: "40%",
     height: "400px",
     showBullets: true,
     showArrow:false

@@ -8,7 +8,7 @@
 		 {url:"image-path"},
  		 {url:"image-path"}
  ];
- 
+
  const App () = {
    return(  
       <div>  
@@ -19,6 +19,7 @@
            showBullets={true} /> 
       </div>
  )};
+ ```
 
 | Name | Type | Required | Description | Default |
 | ---  | ---  | -------- | ----------- | ------- | 

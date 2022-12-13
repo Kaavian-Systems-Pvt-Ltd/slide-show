@@ -1,9 +1,23 @@
-import React , { useState , useEffect} from 'react';
+import React , { useState , useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Dot } from './dot';
 import { Arrows } from './arrow';
 import { SliderContent } from './slidercontent';
 import './slider.css';
+
+/**
+ * 
+ * @param {Object} props
+ * @param {ArrayOfObjects} props.slides image-url with url key
+ * @param {String} props.width width of slider in percentage
+ * @param {String} props.height height of the slider in pixels
+ * @param {Boolean} props.autoPlay if it false we have to move slide by arrows 
+ * @param {Boolean} props.showBullets it shows which imsge is active
+ * @param {Boolean} props.showArrow used to move a slide if autoPlay is stop
+ * @param {Number} props.transitionSpeed speed of slide change
+ * @returns slideshow
+ * 
+ */
 
 export const Slider = (props)=> {
   const [ activeIndex , setActiveIndex ] = useState (0);

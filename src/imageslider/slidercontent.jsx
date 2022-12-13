@@ -11,6 +11,7 @@ export const SliderContent = ({ activeIndex , slide })=> {
       {slide.map ((el , index)=> (
         <div className='slide' key={index}>
           <img src={el.url} alt={index} className='slide-image' />
+          <p className='caption'>{el.caption}</p>
         </div>
       ))}
     </div>

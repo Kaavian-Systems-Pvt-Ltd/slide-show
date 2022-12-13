@@ -3,22 +3,22 @@
 ## Usage
 
 ###  import {Slider} from '@kaavian-sys/slide-show'
-
-#### const images=[
-####		 {url:"image-path"},
-#### 		 {url:"image-path"}
-#### ];
-
-#### const App () = {
-####   return(  
-####      <div>  
-####        <Slider 
-####           slides={images},
-####           width={'70%'},
-####           height={'400px'},
-####           showBullets={true} /> 
-####      </div>
-#### )};
+```
+ const images=[
+		 {url:"image-path"},
+ 		 {url:"image-path"}
+ ];
+ 
+ const App () = {
+   return(  
+      <div>  
+        <Slider 
+           slides={images},
+           width={'70%'},
+           height={'400px'},
+           showBullets={true} /> 
+      </div>
+ )};
 
 | Name | Type | Required | Description | Default |
 | ---  | ---  | -------- | ----------- | ------- | 

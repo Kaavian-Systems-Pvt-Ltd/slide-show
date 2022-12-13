@@ -8,13 +8,13 @@ import './slider.css';
 /**
  * 
  * @param {Object} props
- * @param {ArrayOfObjects} props.slides image-url with url key
+ * @param {Array.<{url: String, caption: String}>} props.slides
  * @param {String} props.width width of slider in percentage
  * @param {String} props.height height of the slider in pixels
  * @param {Boolean} props.autoPlay if it false we have to move slide by arrows 
  * @param {Boolean} props.showBullets it shows which imsge is active
  * @param {Boolean} props.showArrow used to move a slide if autoPlay is stop
- * @param {Number} props.transitionSpeed speed of slide change
+ * @param {Number} props.transitionSpeed In milliSeconds
  * @returns slideshow
  * 
  */

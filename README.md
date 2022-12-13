@@ -1,12 +1,12 @@
 # Slide-Show
 
 ## Usage
-
-###  import {Slider} from '@kaavian-sys/slide-show'
+ 
 ```
+ import {Slider} from '@kaavian-sys/slide-show'
  const images=[
-		 {url:"image-path"},
- 		 {url:"image-path"}
+     {url:"image-path"},
+ 	 {url:"image-path"}
  ];
 
  const App () = {

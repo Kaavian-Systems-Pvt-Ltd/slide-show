@@ -21,12 +21,12 @@ import './slider.css';
 
 export const Slider = (props)=> {
   const [ activeIndex , setActiveIndex ] = useState (0);
-  const [ arrow , setArrow ] = useState (props.showArrow);
+  // const [ arrow , setArrow ] = useState (props.showArrow);
   const { length } = props.slides;
   useEffect (()=> {
     if (!props.slides) return null;
-    if (props.autoPlay !== true) setArrow (true);
-    else setArrow (false);
+    // if (props.autoPlay !== true) setArrow (true);
+    // else setArrow (false);
     props.autoPlay && setTimeout (()=> {
       activeIndex === length - 1
         ? setActiveIndex (0)
@@ -45,7 +45,7 @@ export const Slider = (props)=> {
         activeIndex={activeIndex}
         slide={props.slides}
       />
-      {arrow && (
+      {props.showArrow && (
       <Arrows
         prevSlide={()=> (activeIndex === 0 ? setActiveIndex (length - 1) : setActiveIndex (activeIndex - 1))}
         nextSlide={()=> (activeIndex === length - 1 ? setActiveIndex (0) : setActiveIndex (activeIndex + 1))}

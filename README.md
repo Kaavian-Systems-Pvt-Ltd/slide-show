@@ -13,9 +13,9 @@
    return(  
       <div>  
         <Slider 
-           slides={images},
-           width={'70%'},
-           height={'400px'},
+           slides={images}
+           width={'70%'}
+           height={'400px'}
            showBullets={true} /> 
       </div>
  )};

@@ -1,48 +1,46 @@
 .slider-container{
-    box-shadow: 0 3px 3px 0 rgb(100, 100, 203);
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
     overflow: hidden;
 }
-.slide-list {
-    display: flex;
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all .3s ease;
+}
+.slide img{
     width: 100%;
+    height: 100%;
 }
-.slide {
-    flex: 1 0 100%;
-    position: relative;
+.current{
+    opacity: 1;
+    transform: translateX(0);
 }
-.slide-image{
-    display: flex;
-    margin: 0 auto;
-    width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-    border-radius: 10px;
-}
-.caption{
-    font-size: 20px;
-    color:white;
+.arrow-prev , .arrow-next{
     position: absolute;
-    top: 75%;
-    left: 20%;
-    justify-content: center;
-}
-.prevslide, .nextslide{
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    background: transparent;
+    width : 1.5rem;
+    height: 1.5rem;
     cursor: pointer;
-    position: absolute;
-    color : black;
+    z-index: 999;
     top: 50%;
-    font-size: 2rem;
-    opacity:0.9;
+    opacity: .7;
 }
-.nextslide{
+.arrow-prev :hover , .arrow-next :hover{
+    background-color: white;
+    color: black;
+}
+.arrow-next{
     right: 2rem;
 }
-.prevslide{
+.arrow-prev{
     left: 2rem;
 }
 .all-dots{

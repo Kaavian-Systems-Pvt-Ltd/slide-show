@@ -50,8 +50,8 @@ export const Slider = (props)=> {
 
   return (
     <div className='slider-container' style={setSize}>
-      <AiOutlineArrowLeft className='arrow-prev' onClick={prevSlide} />
-      <AiOutlineArrowRight className='arrow-next' onClick={nextSlide} />
+      {props.showArrow
+      && <><AiOutlineArrowLeft className='arrow-prev' onClick={prevSlide} /><AiOutlineArrowRight className='arrow-next' onClick={nextSlide} /></> }
       {props.slides.map ((slide , index)=> {
         return (
           <div
@@ -93,5 +93,5 @@ Slider.defaultProps = {
   'width' : '50%' ,
   'height' : '50vh' ,
   'showBullets' : true ,
-  'showArrow' : false
+  'showArrow' : true
 };

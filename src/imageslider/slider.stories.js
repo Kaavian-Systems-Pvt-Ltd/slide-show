@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 // import propTypes from "prop-types";
-import { Slider } from './slider';
+import { Slider } from '../../dist/index';
 // import './slider.css';
 
 const stories = storiesOf ('Slideshow Test' , module);
@@ -11,6 +11,7 @@ stories.add ('Normal' , ()=> {
   return (
     <Slider
       slides={images}
+      autoPlay={false}
     />
   );
 });
@@ -20,8 +21,8 @@ stories.add ('autoplay' , ()=> {
   
   return (
     <Slider
-      width= '70%'
-      height= '400px'
+      width= '50%'
+      height= '50vh'
       slides={images}
       autoPlay={true}
 

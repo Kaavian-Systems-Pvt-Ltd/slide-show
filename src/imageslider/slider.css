@@ -24,18 +24,17 @@
     position: absolute;
     border: 2px solid white;
     border-radius: 50%;
-    color: white;
-    background: transparent;
-    width : 1.5rem;
-    height: 1.5rem;
+    color: black;
+    background: white;
+    width : 1.3rem;
+    height: 1.3rem;
     cursor: pointer;
     z-index: 999;
     top: 50%;
     opacity: .7;
 }
 .arrow-prev :hover , .arrow-next :hover{
-    background-color: white;
-    color: black;
+    opacity: .5;
 }
 .arrow-next{
     right: 2rem;
@@ -53,8 +52,8 @@
 }
 .dot{
     cursor: pointer;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.5rem;
+    height: 0.5rem;
     margin: 0 3px;
     border-radius: 50%;
     border:2px solid white;
